@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular Promedio</title>
+</head>
+<body>
+    <style>
+        body {
+            background-color: honeydew;
+        }
+        .formulario {
+            display: flex;
+            justify-content: center;
+            align-items: center;       
+            height: 400px;             
+            margin: 0;
+        }
+    </style>
+    <div class="formulario">
+        <form action="../cgi-bin/Ejercicio2.pl" method="get">
+            <label for="notas"><h2>Ingrese sus notas separadas por guiones: </h2></label>
+            <input type="text" name="notas" placeholder="Ej: 12-15-17-14">
+            <input type="submit" value="Calcular promedio">
+        </form>
+    </div>
+</body>
+</html>
+

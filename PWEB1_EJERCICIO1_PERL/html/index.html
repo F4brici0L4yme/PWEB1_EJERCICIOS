@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correo</title>
+</head>
+<body>
+    <style>
+        body {
+            background-color: honeydew;
+        }
+        .formulario {
+            display: flex;
+            justify-content: center;
+            align-items: center;       
+            height: 400px;             
+            margin: 0;
+        }
+    </style>
+    <div class="formulario">
+        <form action="../cgi-bin/Ejercicio1.pl" method="get">
+            <label for="nombre">Ingrese su usuario: </label>
+            <input type="text" name="nombre" placeholder="Usuario">
+            <label for="nombre">Ingrese su dominio: </label>
+            <input type="text" name="dominio" placeholder="Dominio">
+            <input type="submit" value="¡Construir email!">
+        </form>
+    </div>
+</body>
+</html>
