@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <style>
+        body {
+            background-color: honeydew;
+        }
+        .formulario {
+            display: flex;
+            justify-content: center;
+            align-items: center;       
+            height: 400px;             
+            margin: 0;
+        }
+        input[type="text"] {
+            width: 300px;  
+            height: 50px;  
+        }
+    </style>
+    <div class="formulario">
+        <form action="../cgi-bin/script.pl" method="get">
+            <label for="notas"><h2>Ingrese alguna operación para calcularla: </h2></label>
+            <input type="text" name="expresion" placeholder="Ingrese alguna expresión aquí...">
+            <input type="submit" value="¡Calcular!">
+        </form>
+    </div>
+</body>
+</html>
+
+
