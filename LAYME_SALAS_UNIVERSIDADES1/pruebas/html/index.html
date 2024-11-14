@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Universidades Peruanas</title>
+</head>
+<body>
+    <div class="formYError">
+    <form class="formulario" action="../cgi-bin/buscarDatosUniversidades.pl" method="get">
+        <h1 class="titulo">Buscador de Universidades</h1>
+
+        <div class="input-part">
+            <input type="text" name="NOMBRE" id="NOMBRE" placeholder="Nombre de la universidad (con tildes)">
+        </div>
+
+        <div class="input-part">
+            <select name="TIPO_GESTION" id="TIPO_GESTION">
+                <option value="TIPO" disabled selected >Tipo de gestion</option>
+                <option value="PRIVADO">Privado</option>
+                <option value="PÚBLICO">Publico</option>
+            </select>
+        </div>
+
+        <div class="input-part">
+            <select name="ESTADO_LICENCIAMIENTO" id="ESTADO_LICENCIAMIENTO">
+                <option value="ESTADO" disabled selected >Estado de licenciamiento</option>
+                <option value="LICENCIA OTORGADA">Licencia otorgada</option>
+                <option value="LICENCIA DENEGADA">Licencia denegada</option>
+                <option value="NO PRESENTADO">No presentado</option>
+            </select>
+        </div>
+
+        <div class="input-part">
+            <label>Fecha inicio</label>
+            <input type="date" name="FECHA_INICIO" id="FECHA_INICIO" >
+        </div>
+
+        <div class="input-part">
+            <label>Fecha fin</label>
+            <input type="date" name="FECHA_FIN" id="FECHA_FIN" >
+        </div>
+
+        <div class="input-part">
+            <input type="text" name="PERIODO_LICENCIAMIENTO" id="PERIODO_LICENCIAMIENTO" placeholder="Periodo de licenciamiento (años)">
+        </div>
+
+        <div class="input-part">
+            <select name="DEPARTAMENTO" id="DEPARTAMENTO">
+                <option value="DEPARTAMENTO" disabled selected >Departamento</option>
+                <option value="ÁNCASH">Ancash</option>
+                <option value="AREQUIPA">Arequipa</option>
+                <option value="AYACUCHO">Ayacucho</option>
+                <option value="AMAZONAS">Amazonas</option>
+                <option value="CAJAMARCA">Cajamarca</option>
+                <option value="CALLAO">Callao</option>
+                <option value="CUSCO">Cusco</option>
+                <option value="HUÁNUCO">Huánuco</option>
+                <option value="HUANCAVELICA">Huancavelica</option>
+                <option value="ICA">Ica</option>
+                <option value="JUNÍN">Junín</option>
+                <option value="LA LIBERTAD">La Libertad</option>
+                <option value="LAMBAYEQUE">Lambayeque</option>
+                <option value="LIMA">Lima</option>
+                <option value="LORETO">Loreto</option>
+                <option value="MOQUEGUA">Moquegua</option>
+                <option value="PASCO">Pasco</option>
+                <option value="PIURA">Piura</option>
+                <option value="PUNO">Puno</option>
+                <option value="SAN MARTÍN">San Martín</option>
+                <option value="TACNA">Tacna</option>
+                <option value="TUMBES">Tumbes</option>
+                <option value="UCAYALI">Ucayali</option>
+            </select>
+        </div>
+
+        <div class="input-part">
+            <select name="PROVINCIA" id="PROVINCIA">
+                <option value="PROVINCIA" disabled selected >Provincia</option>
+                <option value="LIMA">Lima</option>
+                <option value="HUAMANGA">Huamanga</option>
+                <option value="TRUJILLO">Trujillo</option>
+                <option value="AREQUIPA">Arequipa</option>
+                <option value="MAYNAS">Maynas</option>
+                <option value="PUNO">Puno</option>
+                <option value="CAJAMARCA">Cajamarca</option>
+                <option value="PIURA">Piura</option>
+                <option value="TACNA">Tacna</option>
+                <option value="HUARAZ">Huaraz</option>
+                <option value="CORONEL PORTILLO">Coronel Portillo</option>
+                <option value="CUSCO">Cusco</option>
+                <option value="CHICLAYO">Chiclayo</option>
+                <option value="CHACHAPOYAS">Chachapoyas</option>
+                <option value="ANGARAES">Angaraes</option>
+                <option value="ANDAHUAYLAS">Andahuaylas</option>
+                <option value="MARISCAL NIETO">Mariscal Nieto</option>
+                <option value="SAN ROMÁN">San Román</option>
+                <option value="JAÉN">Jaén</option>
+                <option value="CHOTA">Chota</option>
+                <option value="BARRANCA">Barranca</option>
+                <option value="CAÑETE">Cañete</option>
+                <option value="BAGUA">Bagua</option>
+                <option value="CHANCHAMAYO">Chanchamayo</option>
+                <option value="ALTO AMAZONAS">Alto Amazonas</option>
+                <option value="TARMA">Tarma</option>
+                <option value="HUANTA">Huanta</option>
+                <option value="HUANCAYO">Huancayo</option>
+                <option value="TAYACAJA">Tayacaja</option>
+                <option value="SÁNCHEZ CARRIÓN">Sánchez Carrión</option>
+                <option value="ICA">Ica</option>
+                <option value="LEÓNCIO PRADO">Leóncio Prado</option>
+                <option value="HUÁNUCO">Huánuco</option>
+                <option value="PASCO">Pasco</option>
+                <option value="PROV. CONST. DEL CALLAO">Prov. Const. del Callao</option>
+                <option value="HUAURA">Huaura</option>
+                <option value="LAMBAYEQUE">Lambayeque</option>
+                <option value="SAN MARTÍN">San Martín</option>
+                <option value="ABANCAY">Abancay</option>
+                <option value="TUMBES">Tumbes</option>
+                <option value="SANTA">Santa</option>
+                <option value="HUANCAVELICA">Huancavelica</option>
+                <option value="LA CONVENCIÓN">La Convención</option>
+                <option value="HUAROCHERÍ">Huarocherí</option>
+                <option value="UTCUBAMBA">Utcubamba</option>
+                <option value="SULLANA">Sullana</option>
+            </select>
+        </div>
+
+        <div class="input-part">
+            <select name="DISTRITO" id="DISTRITO">
+                <option value="DISTRITO" disabled selected >Distrito</option>
+                <option value="LIMA">Lima</option>
+                <option value="AYACUCHO">Ayacucho</option>
+                <option value="TRUJILLO">Trujillo</option>
+                <option value="AREQUIPA">Arequipa</option>
+                <option value="RÍMAC">Rímac</option>
+                <option value="LA MOLINA">La Molina</option>
+                <option value="SAN MIGUEL">San Miguel</option>
+                <option value="SAN JUAN BAUTISTA">San Juan Bautista</option>
+                <option value="PUNO">Puno</option>
+                <option value="SAN MARTÍN DE PORRES">San Martín de Porres</option>
+                <option value="CAJAMARCA">Cajamarca</option>
+                <option value="JESÚS MARÍA">Jesús María</option>
+                <option value="SANTIAGO DE SURCO">Santiago de Surco</option>
+                <option value="SANTA ANITA">Santa Anita</option>
+                <option value="PIURA">Piura</option>
+                <option value="TACNA">Tacna</option>
+                <option value="INDEPENDENCIA">Independencia</option>
+                <option value="CALLERÍA">Callería</option>
+                <option value="LURIGANCHO">Lurigancho</option>
+                <option value="SAN JERÓNIMO">San Jerónimo</option>
+                <option value="POCOLLAY">Pocollay</option>
+                <option value="VILLA EL SALVADOR">Villa El Salvador</option>
+                <option value="CHICLAYO">Chiclayo</option>
+                <option value="LOS OLIVOS">Los Olivos</option>
+                <option value="CHACHAPOYAS">Chachapoyas</option>
+                <option value="PUEBLO LIBRE">Pueblo Libre</option>
+                <option value="LIRCAY">Lircay</option>
+                <option value="YARINACOCHA">Yarinacocha</option>
+                <option value="MOQUEGUA">Moquegua</option>
+                <option value="CHOTA">Chota</option>
+                <option value="BARRANCA">Barranca</option>
+                <option value="SAN VICENTE DE CAÑETE">San Vicente de Cañete</option>
+                <option value="BAGUA">Bagua</option>
+                <option value="CHANCHAMAYO">Chanchamayo</option>
+                <option value="YURIMAGUAS">Yurimaguas</option>
+                <option value="TARMA">Tarma</option>
+                <option value="HUANTA">Huanta</option>
+                <option value="BARRANCO">Barranco</option>
+                <option value="SAN JUAN DE LURIGANCHO">San Juan de Lurigancho</option>
+                <option value="HUANCAYO">Huancayo</option>
+                <option value="DANIEL HERNÁNDEZ">Daniel Hernández</option>
+                <option value="HUAMACHUCO">Huamachuco</option>
+                <option value="CUSCO">Cusco</option>
+                <option value="ICA">Ica</option>
+                <option value="EL TAMBO">El Tambo</option>
+                <option value="CASTILLA">Castilla</option>
+                <option value="RUPA-RUPA">Rupa-Rupa</option>
+                <option value="PILLCO MARCA">Pillco Marca</option>
+                <option value="LINCE">Lince</option>
+                <option value="YANACANCHA">Yanacancha</option>
+                <option value="BELLAVISTA">Bellavista</option>
+                <option value="HUACHO">Huacho</option>
+                <option value="LAMBAYEQUE">Lambayeque</option>
+                <option value="TARAPOTO">Tarapoto</option>
+                <option value="ABANCAY">Abancay</option>
+                <option value="TUMBES">Tumbes</option>
+                <option value="NUEVO CHIMBOTE">Nuevo Chimbote</option>
+                <option value="PIMENTEL">Pimentel</option>
+                <option value="HUÁNUCO">Huánuco</option>
+                <option value="HUANCAVELICA">Huancavelica</option>
+                <option value="VÍCTOR LARCO HERRERA">Víctor Larco Herrera</option>
+                <option value="CHIMBOTE">Chimbote</option>
+                <option value="CHORRILLOS">Chorrillos</option>
+                <option value="MOCHE">Moche</option>
+                <option value="LAREDO">Laredo</option>
+                <option value="SULLANA">Sullana</option>
+                <option value="YANAHUARA">Yanahuara</option>
+                <option value="TIABAYA">Tiabaya</option>
+                <option value="BREÑA">Breña</option>
+                <option value="ATE">Ate</option>
+                <option value="SANTA ANA">Santa Ana</option>
+                <option value="SAN ANTONIO">San Antonio</option>
+                <option value="CHINCHA ALTA">Chincha Alta</option>
+                <option value="IQUITOS">Iquitos</option>
+                <option value="BAGUA GRANDE">Bagua Grande</option>
+                <option value="SAN BORJA">San Borja</option>
+            </select>
+        </div>
+        <button class="buscar" type="submit">Buscar</button>
+    </form>
+    </div>
+</body>
+</html>
