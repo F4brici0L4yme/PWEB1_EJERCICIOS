@@ -4,4 +4,4 @@ docker build -t miweb .
 
 paso 2: copiar este comando para crear el contenerdor.
 
-docker run -d --name myweb1 -p 8096:80 miweb
+docker run -d --name myweb1 -p 8089:80 miweb
