@@ -1,2 +1,1 @@
-# Trabajo de Mauro
-En esta rama estara mi parte del trabajo
+# Este programa hace consultas sobre las universidades de Perú
