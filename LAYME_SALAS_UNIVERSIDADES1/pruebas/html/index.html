@@ -1,90 +1,84 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
     <title>Universidades Peruanas</title>
 </head>
+
 <body>
     <div class="formYError">
-    <form class="formulario" action="../cgi-bin/buscador.pl" method="get">
-        <h1 class="titulo">Buscador de Universidades</h1>
-
-        <div class="input-part">
-            <input type="text" name="NOMBRE" id="NOMBRE" placeholder="Nombre de la universidad">
-        </div>
-
-        <div class="input-part">
-            <select name="TIPO_GESTION" id="TIPO_GESTION">
-                <option value="TIPO" disabled selected >Tipo de gestion</option>
-                <option value="PRIVADO">Privado</option>
-                <option value="PÚBLICO">Publico</option>
-            </select>
-        </div>
-
-        <div class="input-part">
-            <select name="ESTADO_LICENCIAMIENTO" id="ESTADO_LICENCIAMIENTO">
-                <option value="ESTADO" disabled selected >Estado de licenciamiento</option>
-                <option value="LICENCIA OTORGADA">Licencia otorgada</option>
-                <option value="LICENCIA DENEGADA">Licencia denegada</option>
-                <option value="NO PRESENTADO">No presentado</option>
-            </select>
-        </div>
-
-        <div class="input-part">
-            <label>Fecha inicio</label>
-            <input type="date" name="FECHA_INICIO" id="FECHA_INICIO" >
-        </div>
-
-        <div class="input-part">
-            <label>Fecha fin</label>
-            <input type="date" name="FECHA_FIN" id="FECHA_FIN" >
-        </div>
-
-        <div class="input-part">
-            <input type="text" name="PERIODO_LICENCIAMIENTO" id="PERIODO_LICENCIAMIENTO" placeholder="Periodo de licenciamiento (años)">
-        </div>
-
-        <div class="input-part">
-            <select name="DEPARTAMENTO" id="DEPARTAMENTO">
-                <option value="DEPARTAMENTO" disabled selected >Departamento</option>
-                <option value="ÁMAZONAS">Amazonas</option>
-                <option value="ÁNCASH">Ancash</option>
-                <option value="AREQUIPA">Arequipa</option>
-                <option value="AYACUCHO">Ayacucho</option>
-                <option value="AMAZONAS">Amazonas</option>
-                <option value="CAJAMARCA">Cajamarca</option>
-                <option value="CALLAO">Callao</option>
-                <option value="CUSCO">Cusco</option>
-                <option value="HUÁNUCO">Huánuco</option>
-                <option value="HUANCAVELICA">Huancavelica</option>
-                <option value="ICA">Ica</option>
-                <option value="JUNÍN">Junín</option>
-                <option value="LA LIBERTAD">La Libertad</option>
-                <option value="LAMBAYEQUE">Lambayeque</option>
-                <option value="LIMA">Lima</option>
-                <option value="LORETO">Loreto</option>
-                <option value="MOQUEGUA">Moquegua</option>
-                <option value="PASCO">Pasco</option>
-                <option value="PIURA">Piura</option>
-                <option value="PUNO">Puno</option>
-                <option value="SAN MARTÍN">San Martín</option>
-                <option value="TACNA">Tacna</option>
-                <option value="TUMBES">Tumbes</option>
-                <option value="UCAYALI">Ucayali</option>
-            </select>
-        </div>
-
-        <div class="input-part">
+        <form class="formulario" action="../cgi-bin/buscador.pl" method="get">
+            <h1 class="titulo">Buscador de Universidades</h1>
+            <div class="input-part">
+                <input type="text" name="NOMBRE" id="NOMBRE" placeholder="Nombre de la universidad">
+            </div>
+            <div class="input-part">
+                <select name="TIPO_GESTION" id="TIPO_GESTION">
+                    <option value="TIPO" disabled selected>Tipo de gestion</option>
+                    <option value="PRIVADO">Privado</option>
+                    <option value="PÚBLICO">Publico</option>
+                </select>
+            </div>
+            <div class="input-part">
+                <select name="ESTADO_LICENCIAMIENTO" id="ESTADO_LICENCIAMIENTO">
+                    <option value="ESTADO" disabled selected>Estado de licenciamiento</option>
+                    <option value="LICENCIA OTORGADA">Licencia otorgada</option>
+                    <option value="LICENCIA DENEGADA">Licencia denegada</option>
+                    <option value="NO PRESENTADO">No presentado</option>
+                </select>
+            </div>
+            <div class="input-part">
+                <label>Fecha inicio</label>
+                <input type="date" name="FECHA_INICIO" id="FECHA_INICIO">
+            </div>
+            <div class="input-part">
+                <label>Fecha fin</label>
+                <input type="date" name="FECHA_FIN" id="FECHA_FIN">
+            </div>
+            <div class="input-part">
+                <input type="text" name="PERIODO_LICENCIAMIENTO" id="PERIODO_LICENCIAMIENTO"
+                    placeholder="Periodo de licenciamiento (años)">
+            </div>
+            <div class="input-part">
+                <select name="DEPARTAMENTO" id="DEPARTAMENTO">
+                    <option value="DEPARTAMENTO" disabled selected>Departamento</option>
+                    <option value="ÁNCASH">Ancash</option>
+                    <option value="AREQUIPA">Arequipa</option>
+                    <option value="AYACUCHO">Ayacucho</option>
+                    <option value="AMAZONAS">Amazonas</option>
+                    <option value="CAJAMARCA">Cajamarca</option>
+                    <option value="CALLAO">Callao</option>
+                    <option value="CUSCO">Cusco</option>
+                    <option value="HUÁNUCO">Huánuco</option>
+                    <option value="HUANCAVELICA">Huancavelica</option>
+                    <option value="ICA">Ica</option>
+                    <option value="JUNÍN">Junín</option>
+                    <option value="LA LIBERTAD">La Libertad</option>
+                    <option value="LAMBAYEQUE">Lambayeque</option>
+                    <option value="LIMA">Lima</option>
+                    <option value="LORETO">Loreto</option>
+                    <option value="MOQUEGUA">Moquegua</option>
+                    <option value="PASCO">Pasco</option>
+                    <option value="PIURA">Piura</option>
+                    <option value="PUNO">Puno</option>
+                    <option value="SAN MARTÍN">San Martín</option>
+                    <option value="TACNA">Tacna</option>
+                    <option value="TUMBES">Tumbes</option>
+                    <option value="UCAYALI">Ucayali</option>
+                </select>
+            </div>
+            <div class="input-part">
                 <input type="text" name="PROVINCIA" id="PROVINCIA" placeholder="Provincia">
-        </div>
-
-        <div class="input-part">
-            <input type="text" name="DISTRITO" id="DISTRITO" placeholder="Distrito">
-        </div>
-        <button class="buscar" type="submit">Buscar</button>
-    </form>
+            </div>
+            <div class="input-part">
+                <input type="text" name="DISTRITO" id="DISTRITO" placeholder="Distrito">
+            </div>
+            <button class="buscar" type="submit">Buscar</button>
+        </form>
     </div>
 </body>
+
 </html>

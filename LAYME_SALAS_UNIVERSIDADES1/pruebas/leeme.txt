@@ -1,7 +1,7 @@
-paso 1: Copiar este comando para crear la imagen.
+Copiar este comando para crear la imagen.
 
 docker build -t laymesalas .
 
-paso 2: copiar este comando para crear el contenerdor.
+Copiar este comando para crear el contenedor.
 
-docker run -d --name pweb1Universidades -p 8089:80 laymesalas
+docker run -d --name universidades -p 8089:80 laymesalas

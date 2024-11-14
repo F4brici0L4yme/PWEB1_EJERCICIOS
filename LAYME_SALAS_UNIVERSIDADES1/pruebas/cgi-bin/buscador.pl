@@ -1,5 +1,4 @@
 #!/usr/bin/perl -w
-
 use strict;
 use warnings;
 use Text::CSV;
@@ -71,7 +70,7 @@ print << "FORM";
             background-position: center;
             overflow-y: auto;
             padding-top: 50px;
-            background-image: url('https://cdn01.pucp.education/idehpucp/images/2024/03/post-foto-sunedu-enlace.jpg');
+            background-image: url('https://www.sunedu.gob.pe/wp-content/uploads/2019/06/foto-fachada-sunedu-06.jpg');
             background-repeat: no-repeat;
             background-attachment: fixed;
         }
@@ -219,7 +218,6 @@ print << "FORM";
         <div class="input-part">
             <select name="DEPARTAMENTO" id="DEPARTAMENTO">
                 <option value="DEPARTAMENTO" disabled selected >Departamento</option>
-                <option value="AMAZONAS">Amazonas</option>
                 <option value="ÁNCASH">Ancash</option>
                 <option value="AREQUIPA">Arequipa</option>
                 <option value="AYACUCHO">Ayacucho</option>
@@ -261,7 +259,6 @@ print << "FORM";
 FORM
 
 if (@universidades == 1) {
-    # Si solo hay una universidad, mostrar la tabla con los datos y el mapa
     my $univ = $universidades[0];
     my ($codigo, $nombre_u, $tipo, $estado, $inicio, $fin, $periodo, $dpto, $prov, $dist, $ubigeo, 
         $latitud, $longitud, $fecha_corte) = @$univ;
@@ -389,8 +386,6 @@ print << "FORM";
         <div class="resultado">
             <h1 class="titulo">Detalles de la Universidad</h1>
             <div class="resultado-mensaje">Universidad encontrada: $nombre_u</div>
-
-            <!-- Tabla con los datos de la universidad -->
             <div class="cabecera">
                 <div class="columna">Código</div>
                 <div class="columna">Nombre</div>
@@ -403,7 +398,6 @@ print << "FORM";
                 <div class="columna">Provincia</div>
                 <div class="columna">Distrito</div>
             </div>
-
             <div class="fila">
                 <div class="columna">$codigo</div>
                 <div class="columna">$nombre_u</div>
@@ -417,7 +411,6 @@ print << "FORM";
                 <div class="columna">$dist</div>
             </div>
         </div>
-
         <div class="map-container">
             <h2>Ubicación en Google Maps</h2>
             <iframe
@@ -454,7 +447,7 @@ print << "FORM";
                 background-position: center;
                 overflow-y: auto;
                 padding-top: 50px;
-                background-image: url('https://cdn01.pucp.education/idehpucp/images/2024/03/post-foto-sunedu-enlace.jpg');
+                background-image: url('https://www.sunedu.gob.pe/wp-content/uploads/2019/06/foto-fachada-sunedu-06.jpg');
                 background-repeat: no-repeat;
                 background-attachment: fixed;
             }
@@ -564,18 +557,13 @@ print << "FORM";
                 <div class="columna">Departamento</div>
                 <div class="columna">Provincia</div>
                 <div class="columna">Distrito</div>
-                <div class="columna">Dirección</div> <!-- Nueva columna para la ubicación -->
+                <div class="columna">Dirección</div>
             </div>
 FORM
-
     foreach my $univ (@universidades) {
         my ($codigo, $nombre_u, $tipo, $estado, $inicio, $fin, $periodo, $dpto, $prov, $dist, $ubigeo, 
             $latitud, $longitud, $fecha_corte) = @$univ;
-        
-        # Generar la URL de Google Maps con las coordenadas
         my $maps_url = "https://www.google.com/maps?q=$latitud,$longitud";
-
-        # Imprimir los resultados en la estructura de divs, incluyendo el enlace
         print "<div class='fila'>";
         print "<div class='columna'>$codigo</div>";
         print "<div class='columna'>$nombre_u</div>";
